@@ -1,7 +1,7 @@
 const searchBar = document.querySelector(".search input"),
 searchIcon = document.querySelector(".search button"),
-usersList = document.querySelector(".users-list");
-
+usersList = document.querySelector(".users-list"),
+chatList = document.querySelector(".chat-list");
 searchIcon.onclick = ()=>{
   searchBar.classList.toggle("show");
   searchIcon.classList.toggle("active");

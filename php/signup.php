@@ -47,6 +47,7 @@
                             }
                         }else{
                             echo "Envie uma imagem - jpeg, png ou jpg!";
+                      
                         }
                     }else{
                         echo "A imagem deve ser - jpeg, png ou jpg!";

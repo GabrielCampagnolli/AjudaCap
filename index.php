@@ -44,7 +44,7 @@
         </div>
         <div class="field image">
           <label>Foto de Perfil</label>
-          <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
+          <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg">
         </div>
         <div class="field button">
           <input type="submit" name="submit" value="Cadastrar">

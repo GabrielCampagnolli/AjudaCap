@@ -40,12 +40,10 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `chatSaoJose`(
-  `id` int NOT NULL,
   `id_bairro_chat` int NOT NULL,
   `id_usu` int not null,
   `msg_id` int not null,
-  `msg_txt` varchar(255) not null,
-  `msg_id_usu` int not null
+  `msg_txt` varchar(255) not null
 );
 ALTER TABLE `ChatSaoJose`
   ADD PRIMARY KEY (`msg_id`);
@@ -59,6 +57,17 @@ ALTER TABLE `messages`
 
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
+CREATE TABLE `ChatSantoAntonio`(
+  `id_bairro_chat` int NOT NULL,
+  `id_usu` int not null,
+  `msg_id` int not null,
+  `msg_txt` varchar(255) not null
+);
+ALTER TABLE `ChatSantoAntonio`
+  ADD PRIMARY KEY (`msg_id`);
+  
+ALTER TABLE `ChatSantoAntonio`
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT;
 
 
 
@@ -71,5 +80,5 @@ ALTER TABLE `users`
 COMMIT;
 insert into `bairro`(chat_bairro,user_id,id,name)
 values(1,1,1,'São José');
-insert into `chatSaoJose`(id,id_bairro_chat,id_usu,msg_txt,msg_id_usu)
-values(1,1,1,"Bem vindo(a)!!",1);
+insert into `bairro`(chat_bairro,user_id,id,name)
+values(2,2,2,'Santo Antonio');
