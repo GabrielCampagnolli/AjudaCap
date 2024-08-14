@@ -6,24 +6,10 @@
   }
 ?>
 <?php include_once "header.php"; ?>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat - Chat da Cidade</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
 <body>
-    <header>
-        <h1>Chat</h1>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="sobre.html">Sobre Nós</a>
-        </nav>
-    </header>
-    <main>
-        <div id="chat-box">
+  <div class="wrapper">
+    <section class="chat-area">
+      <header>
         <?php 
           $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
           $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$user_id}");
@@ -39,14 +25,19 @@
           <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
           <p><?php echo $row['status']; ?></p>
         </div>
-        </div>
-        <form action="#">
-            <input type="text" id="message" name="message" placeholder="Digite sua mensagem..." required>
-            <button type="submit">Enviar</button>
-        </form>
-    </main>
-    <footer>
-        <p>&copy; 2024 Chat da Cidade</p>
-    </footer>
+      </header>
+      <div class="chat-box">
+
+      </div>
+      <form action="#" class="typing-area">
+        <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
+        <input type="text" name="message" class="input-field" placeholder="Envie uma mensagem..." autocomplete="off">
+        <button><i class="fab fa-telegram-plane"></i></button>
+      </form>
+    </section>
+  </div>
+
+  <script src="javascript/chat.js"></script>
+
 </body>
 </html>

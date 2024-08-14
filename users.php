@@ -1,7 +1,7 @@
 <?php 
  include_once "php/utilites.php";
 ?>
-<?php include_once "header.php"; ?>
+
 <body>
   <div class="wrapper">
     <section class="users">
